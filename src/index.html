@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
-    />
-    <link rel="stylesheet" href="./style.css" />
+    >
+    <link rel="stylesheet" href="./style.css" >
+    <script defer src="./script.js"></script>
     <title>Frontend Mentor | Intro component with sign up form</title>
   </head>
   <body>
@@ -30,37 +31,57 @@
           >
         </p>
         <form>
-          <label for="first-name">First Name</label>
-          <input
-            type="text"
-            name="first-name"
-            id="first-name"
-            placeholder="First Name"
-          />
+          <fieldset>
+            <label for="first-name">First Name</label>
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              placeholder="First Name"
+              aria-required="true"
+            >
+            <img src="../images/icon-error.svg" alt="error icon" >
+            <p>First Name cannot be empty</p>
+          </fieldset>
 
-          <label for="last-name">Last Name</label>
-          <input
-            type="text"
-            name="last-name"
-            id="last-name"
-            placeholder="Last Name"
-          />
+          <fieldset>
+            <label for="last-name">Last Name</label>
+            <input
+              type="text"
+              name="last-name"
+              id="last-name"
+              placeholder="Last Name"
+              aria-required="true"
+            >
+            <img src="../images/icon-error.svg" alt="error icon" >
+            <p>Last Name cannot be empty</p>
+          </fieldset>
 
-          <label for="email">Email Address</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email Address"
-          />
+          <fieldset>
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+              aria-required="true"
+            >
+            <img src="../images/icon-error.svg" alt="error icon" >
+            <p>Look like this is not an email</p>
+          </fieldset>
 
-          <label for="password">Password</label>
-          <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Password"
-          />
+          <fieldset>
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              aria-required="true"
+            >
+            <img src="../images/icon-error.svg" alt="error icon" >
+            <p>Password cannot be empty</p>
+          </fieldset>
 
           <button type="submit">Claim your free trial</button>
           <p>

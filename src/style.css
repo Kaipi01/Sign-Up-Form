@@ -121,6 +121,44 @@ form {
   }
 }
 
+fieldset {
+  text-align: end;
+  border: none;
+  width: 100%;
+  position: relative;
+}
+
+fieldset > img {
+  position: absolute;
+  right: 20px;
+  top: 12.5px;
+  display: none;
+}
+
+fieldset > p {
+  display: none;
+  font-size: 0.7rem;
+  margin-top: -12px;
+  color: hsl(0, 100%, 69%);
+}
+
+fieldset > input.error {
+  border-color: hsl(0, 100%, 69%);
+  border-width: 2px;
+}
+
+fieldset > input.error ~ img {
+  display: block;
+}
+
+fieldset > input.error ~ p {
+  display: inline;
+}
+
+fieldset > input[name="email"].error::placeholder {
+  color: hsl(0, 100%, 69%);
+}
+
 form > p {
   font-size: 0.7rem;
 }
@@ -133,6 +171,7 @@ input {
   border-radius: 7px;
   color: hsl(249, 10%, 26%);
   border: 1px solid hsl(246, 25%, 77%);
+  transition: all 0.3s ease-in-out;
 }
 
 input::placeholder {
@@ -140,7 +179,9 @@ input::placeholder {
 }
 
 input:focus {
-  border-width: 1px;
+  box-shadow: 0px 0px 0px 1px hsl(248, 37%, 44%);
+  border-color: hsl(248, 37%, 44%) !important;
+  outline: none;
 }
 
 button {
@@ -160,9 +201,8 @@ button {
 }
 
 button:hover,
-button:focus,
-button:active {
-  background-color: hsl(154, 74%, 27%);
+button:focus {
+  background-color: rgb(78, 223, 160);
 }
 
 a {
